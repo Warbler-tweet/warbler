@@ -3,12 +3,14 @@ STATIC LAYOUT CSS
 **************************************/
 
 .wrapper {
+  /* width: 960px; */
   width: 960px;
   margin: 0 auto;
 }
 
 header {
-	width: 960px;
+  width: 960px;
+	
 }
 
 nav, section {
@@ -24,8 +26,19 @@ section {
   width: 750px;
 }
 
-
-
+input, select {
+        padding: 4px 10px;
+        border: 0;
+        font-size: 16px;
+      }
+.search {
+        width: 75%;
+}
+.submit {
+        width: 70px;
+        background-color: #1c87c9;
+        color: #ffffff;
+}
 /**************************************
 CSS TO MAKE THE EXAMPLE LOOK PRETTY
 **************************************/
