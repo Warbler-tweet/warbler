@@ -1,57 +1,62 @@
-<!DOCTYPE html>  
-
-<html>
-
-	
-<div class="wrapper">
-   <head> 
-      <meta charset = "utf-8"> 
-      <title>...</title>
-	  <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
-   </head> 
-  
-   <body> 
-      <header role = "banner"> 
-         <h1>Web Computing and Web Systems</h1> 
-         <p>COMING SOON 2 WEEKS LEFT</p> 
-      </header> 
-   
-      <nav> 
-         <ul> 
-            <li><a href = ""> Search</a></li> 
-            <li><a href = "results/results.html"> Results</a></li> 
-            <li><a href = ""> link three</a></li> 
-         </ul> 
-      </nav> 
-   
-      <article> 
-         <section>
-            <div class="uptop">			
-            <p>Once article can have multiple sections</p>
-			<form action="results/results.html"> 
-				<input type="text" name="text" class="search" placeholder="Search here!">
-				<select name=”rating”, class="rating">
-					<option value=”none”>Rating</option>
-					<option value=”one”>1</option>
-					<option value=”two”>2</option>
-					<option value=”three”>3</option>
-					<option value=”four”>4</option>
-					<option value=”five”>5</option>
-				</select>
-				<input type="submit" name="submit" class="submit" value="Search">
-			</form>
-         </div>			
-         </section> 
-      </article> 
-   
-      <aside> 
-         <p></p> 
-      </aside> 
-   
-      <footer> 
-         <p>Created by <a href = "">Samuel Alderson</a></p> 
-      </footer> 
-   
-   </body>
-</div>   
-</html>
+<!-- This is HTML5 -->
+<!DOCTYPE html>
+<!-- html files must have html tag -->
+	<html lang="en">
+	  <!-- the first class wraps the entire document for use in CSS  -->
+		<div class="wrapper">
+		<!-- the head tag contains information related to the document -->
+			<head>
+				<meta charset="utf-8">
+					<title>The Warbler</title>
+					<link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
+				</head>
+				<!-- the body tag contains the document features -->
+				<body>
+				<!-- the header tag is related to the header information of the document -->
+					<header>
+						<h1>Web Computing and Web Systems</h1>
+						<p>COMING SOON 2 WEEKS LEFT</p>
+					</header>
+					<!-- the nav tag is related to navigating the page(s) -->
+					<!-- There are five related pages for the client side, four of which are in nav -->
+					<nav>
+						<div>
+							<a href=""> Home</a>
+							<a href="results/results.html"> Results</a>
+							<a href="submit/submission.html"> Submission</a>
+							<a href="register/registration.html"> Registration</a>
+						</div>
+					</nav>
+					<!-- article tags are a way to section the page -->
+					<article>
+					<!-- section tags are inner sectioning of articles -->
+						<section>
+							<!-- The first section of the article will have a class to specify position in CSS -->
+								<div class="uptop">
+								<!-- information for the user -->
+									<p>The Warbler brings cannabis enthusiasts and licensed cannabis businesses together.</p>
+									<!-- This form takes as input a textual element for searching the database -->
+									<!-- and a numeric element in a dropdown menu to search by rating -->
+									<form action="results/results.html">
+										<input type="text" name="text" class="search" placeholder="Search for stores near you!">
+											<select name=”rating”, class="rating">
+												<option value=”none”>Rating</option>
+												<option value=”one”>1</option>
+												<option value=”two”>2</option>
+												<option value=”three”>3</option>
+												<option value=”four”>4</option>
+												<option value=”five”>5</option>
+											</select>
+											<input type="submit" name="submit" class="submit" value="Search">
+											</form>
+										</div>
+									</section>
+							</article>
+							<!-- the footer tag is related to the footer information of the document -->
+							<footer>
+								<p>Created by <a href="">Samuel Alderson</a>
+								</p>
+							</footer>
+						</body>
+					</div>
+				</html>

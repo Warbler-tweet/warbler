@@ -1,110 +1,124 @@
-<!DOCTYPE html>  
-
-<html>
-
-	
-<div class="wrapper">
-   <head> 
-      <meta charset = "utf-8"> 
-      <title>...</title>
-	  <link href="../assets/css/styles.css" rel="stylesheet" type="text/css" />
-   </head> 
-  
-   <body> 
-      <header role = "banner"> 
-         <h1>Web Computing and Web Systems</h1> 
-         <p>COMING SOON 2 WEEKS LEFT</p> 
-      </header> 
-   
-      <nav> 
-         <ul> 
-            <li><a href = "../index.html"> Search</a></li> 
-            <li><a href = "results.html"> Results</a></li> 
-            <li><a href = ""> link three</a></li> 
-         </ul> 
-      </nav> 
-   
-      <article> 
-         <section> 
-		 <div class="uptop">
-		  
-            <p></p>
-			<table>
-            <thead>
-                <tr>
-                    <th>Result</th>
-                    <th>Name</th>
-                    <th>Latitude</th>
-                    <th>Longitude</th>
-                    <th>Average Rating</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>T Cannabis</td>
-                    <td>43.63081</td>
-                    <td>-80.04016</td>
-                    <td>5</td>
-                </tr>
-            </tbody>
-        </table>
-		</div>
-         </section>
-		
-		 <section>
-			<p></p>		 
-            <table>
-            <thead>
-                <tr>
-                    <th>Result</th>
-                    <th>Name</th>
-                    <th>Location</th>
-                     
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>T Cannabis</td>
-                    <td><img src="1_TCANNABIS.PNG" alt="T Cannabis"></td>
-                </tr>
-            </tbody>
-         </table>
-		 </section>
-		 <section>
-		 <div class="downbottom">
-		 <h4> Overview </h4>
-		 <p>T Cannabis located at 38 Mill St. E. Acton, ON</p>
-		  <table>
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Review</th>
-                    <th>Score</th>
-                     
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Marge</td>
-                    <td>I really liked the service.</td>
-                    <td>5</td>
-                </tr>
-            </tbody>
-         </table>
-		 </div>
-		 </section>
-      </article> 
-   
-      <aside> 
-         <p></p> 
-      </aside> 
-   
-      <footer> 
-         <p>Created by <a href = "">Samuel Alderson</a></p> 
-      </footer> 
-   
-   </body>
-</div>   
-</html>
+<!-- This is HTML5 -->
+<!DOCTYPE html>
+<!-- html files must have html tag -->
+	<html>
+	<!-- the first class wraps the entire document for use in CSS  -->
+		<div class="wrapper">
+		<!-- the head tag contains information related to the document -->
+			<head>
+				<meta charset="utf-8">
+					<title>The Warbler</title>
+					<link href="../assets/css/styles.css" rel="stylesheet" type="text/css"/>
+				</head>
+				<!-- the body tag contains the document features -->
+				<body>
+				<!-- the header tag is related to the header information of the document -->
+					<header>
+						<h1>Web Computing and Web Systems</h1>
+						<p>COMING SOON 2 WEEKS LEFT</p>
+					</header>
+					<!-- the nav tag is related to navigating the page(s) -->
+					<!-- There are five related pages for the client side, four of which are in nav -->
+					<nav>
+						<div>
+							<a href="../index.html"> Home</a>
+							<a href="results.html"> Results</a>
+							<a href="../submit/submission.html"> Submission</a>
+							<a href="../register/registration.html"> Registration</a>
+						</div>
+					</nav>
+					<!-- article tags are a way to section the page -->
+					<article>
+					<!-- section tags are inner sectioning of articles -->
+						<section>
+							<!-- The first section of the article will have a class to specify position in CSS -->
+							<div class="uptop">
+								<h4> Overview </h4>
+								<p>T Cannabis located at 38 Mill St. E. Acton, ON</p>
+								<!-- the table contains the results for one sample -->
+								<!-- there are five columns to view -->
+								<!-- and there is one hard coded entrie to display without using a server -->
+								<table>
+									<thead>
+										<tr>
+											<th>Result</th>
+											<th>Name</th>
+											<th>Latitude</th>
+											<th>Longitude</th>
+											<th>Average Rating</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>T Cannabis</td>
+											<td>43.63081</td>
+											<td>-80.04016</td>
+											<td>5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+						<!-- The second section contains the further results -->
+						<section>
+						<!-- This table contains the map information from the results, only one entry (sample) -->
+							<table>
+								<thead>
+									<tr>
+										<th>Result</th>
+										<th>Name</th>
+										<th>Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>T Cannabis</td>
+										<td>
+											<img src="1_TCANNABIS.PNG" alt="T Cannabis"></td>
+										</tr>
+									</tbody>
+								</table>
+							</section>
+							<!-- The third section contains a table of the reviews for the business from users -->
+							<section>
+								<div class="downbottom">
+									<h4> Reviews </h4>
+									<!-- The table has three columns, a username, review, and the score -->
+									<table>
+										<thead>
+											<tr>
+												<th>Username</th>
+												<th>Review</th>
+												<th>Score</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Marge</td>
+												<td>I really liked the service.</td>
+												<td>5</td>
+											</tr>
+											<tr>
+												<td>Devon</td>
+												<td>Great people here.</td>
+												<td>4</td>
+											</tr>
+											<tr>
+												<td>Stewart</td>
+												<td>They have no idea what they are doing.</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+						</article>
+						<!-- the footer tag is related to the footer information of the document -->
+						<footer>
+							<p>Created by <a href="">Samuel Alderson</a> </p>
+						</footer>
+					</body>
+				</div>
+			</html>
