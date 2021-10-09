@@ -11,16 +11,17 @@ which centers all elements in the wrapper  **/
 width: 1360px;
 margin: auto;
 }
+
 a {
 color: #ffffff;
 }
 header, footer {
 width: 1360px;
 border: 1px solid rgba(255,255,255,0.8);
-/* margin-bottom: 10px; */
 border-radius: 3px;
 padding: 5px 0;
 position: fixed;
+background: #e52165;
 }
 footer {
 bottom: 0;
@@ -30,11 +31,12 @@ nav {
 font-size: 22px;
 width: 1360px;
 margin-right: 10px;
-top: 130px;
+top: 125px;
 position: fixed;
 border: 1px solid rgba(255,255,255,0.8);
 border-radius: 3px;
 padding: 10px 0;
+background: #5c3c92;
 }
 section {
 width: 1360px;
@@ -46,6 +48,8 @@ font-size: 20px;
 input, select {
 padding: 10px;
 font-size: 20px;
+background-color: #5c3c92;
+color: #ffffff;
 }
 .uptop {
 margin-top: 320px;
@@ -58,7 +62,7 @@ width: 65%;
 }
 .submit {
 width: 90px;
-background-color: #1c87c9;
+background-color: #5c3c92;
 color: #ffffff;
 }
 .Business_Name,
@@ -70,6 +74,8 @@ color: #ffffff;
 .Longitude {
 width: 25%;
 float: left;
+background-color: #5c3c92;
+color: #ffffff;
 }
 input.checkbox {
 height: 25px;
@@ -92,7 +98,7 @@ color: #ffffff;
 float: left;
 }
 body {
-background: #2980b9;
+background: #0d1137;
 color: #FFF;
 font-family: Helvetica;
 text-align: center;
@@ -110,6 +116,7 @@ padding: 15px;
 margin-bottom: 100px;
 border-radius: 3px;
 font-size: 20px;
+background-color: #5c3c92;
 }
 img {
 border: 1px solid #ddd;
