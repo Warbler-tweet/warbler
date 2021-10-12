@@ -22,10 +22,7 @@
 			<link rel="apple-touch-startup-image" href="https://www.thewarbler.ca/images/warbler.PNG" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-			<!-- Basic Meta Data for Android home screen-->
-			
-			
-			
+			<!-- the css file location used in the html -->
 			<link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
 		</head>
 				<!-- the first class wraps the entire document for use in CSS  -->
@@ -34,6 +31,9 @@
 				<body>
 				<!-- the header tag is related to the header information of the document -->
 					<header>
+					<!-- using the img srcset we specify different quality images for different types of graphics -->
+					  <img src="images/warbler.PNG" alt="Logo" class="logo1" srcset="images/warbler_2x.PNG 2x">
+						<img src="images/warbler.PNG" alt="Logo" class="logo2" srcset="images/warbler_2x.PNG 2x">
 						<h1>The Warbler</h1>
 						<h2>Cannabis business locator Ontario Canada</h2>
 					</header>

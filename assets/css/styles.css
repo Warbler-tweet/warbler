@@ -1,20 +1,23 @@
 /**************************************
-STATIC LAYOUT CSS
+CSS file for index.html, results.html, sample.html, registration.html, submission.html
 **************************************/
+/* All boxes will have dimensions specified by border-box */
 * {
 box-sizing: border-box;
 }
-/** html body will be 960 pixels
-margin 0 auto sets top and bottom to 0 and right and left auto
-which centers all elements in the wrapper  **/
+/** html body will be 1360 pixels across
+margin auto center aligns page. The html body is contained in the wrapper class  **/
 .wrapper {
 width: 1360px;
 margin: auto;
 }
-
+/* href link font is white */
 a {
 color: #ffffff;
 }
+/* headers/footers are the same width as body*/
+/* they have a border and are fixed position on the page while scrolling */
+/* they have a pink color background */
 header, footer {
 width: 1360px;
 border: 1px solid rgba(255,255,255,0.8);
@@ -23,14 +26,16 @@ padding: 5px 0;
 position: fixed;
 background: #e52165;
 }
+/* The footer is contiguous with the page bottom */
 footer {
 bottom: 0;
-position: fixed;
 }
+/* the html nav element has same width as body */
+/* is has a white border, and purple background color */
+/* it is 125 pixesl from the top of page and it is fixed while scrolling */
 nav {
 font-size: 22px;
 width: 1360px;
-margin-right: 10px;
 top: 125px;
 position: fixed;
 border: 1px solid rgba(255,255,255,0.8);
@@ -38,6 +43,9 @@ border-radius: 3px;
 padding: 10px 0;
 background: #5c3c92;
 }
+/* The section element is same width as body */
+/* It is not fixed and will scroll, it has a border as well */
+/* font size is smaller than nav header and footer */
 section {
 width: 1360px;
 padding: 5px 0;
@@ -45,26 +53,41 @@ border: 1px solid rgba(255,255,255,0.8);
 border-radius: 3px;
 font-size: 20px;
 }
+/* the body element has blue background, sets the font family for the whole page */
+/* the page margin is 0 so it is contiguous to the top and bottom*/
+body {
+background: #0d1137;
+color: #FFF;
+font-family: Helvetica;
+text-align: center;
+margin: 0;
+}
+
+/* these elements are about forms */
+/* they specify purple backgrounds and white font */
 input, select {
 padding: 10px;
 font-size: 20px;
 background-color: #5c3c92;
 color: #ffffff;
 }
-.uptop {
-margin-top: 320px;
-}
-.downbottom {
-margin-bottom: 100px;
-}
+/* The search bar fits 65% of the width of a section */
 .search {
 width: 65%;
 }
+/* The submit button is small and white font, with purple background */
 .submit {
 width: 90px;
 background-color: #5c3c92;
 color: #ffffff;
 }
+.submit2 {
+float: left;
+width: 90px;
+background-color: #1c87c9;
+color: #ffffff;
+}
+/* These elements are purple, left aligned, and fill 25 percent of a section */
 .Business_Name,
 .Username,
 .email,
@@ -77,36 +100,39 @@ float: left;
 background-color: #5c3c92;
 color: #ffffff;
 }
+/* increase the size of the checkbox */
 input.checkbox {
 height: 25px;
 }
+/* The descirption fits 75% of the width of a section */
 .Description {
 width: 75%;
 float: left;
 }
-.object_image {
+/* The input image/video form fits 75% of the width of a section */
+.object_image,
+.object_video {
 width: 75%;
 float: left;
 }
-.submit2 {
-float: left;
-width: 90px;
-background-color: #1c87c9;
-color: #ffffff;
-}
+/* the labels above each form element are left aligned*/
 .form_labels {
 float: left;
 }
-body {
-background: #0d1137;
-color: #FFF;
-font-family: Helvetica;
-text-align: center;
-margin: 0;
+
+/* These classes specify the distance from the top or bottom for a given section that uses them */
+.uptop {
+margin-top: 320px;
 }
+.downbottom {
+margin-bottom: 100px;
+}
+/* Table width is smaller than a section so it fits */
 table {
 width: 750px;
 }
+/* The table and its subsections have white borders, are aligned center */
+/* have padding above and below and are purple */
 table, th, td {
 border: 1px solid rgba(255,255,255,0.8);
 border-style: dotted;
@@ -118,13 +144,29 @@ border-radius: 3px;
 font-size: 20px;
 background-color: #5c3c92;
 }
-img {
+/* the host page logo is shown at the top left and right of each html page */
+.logo1 {
+width: 135px;
+float: left;
+}
+.logo2 {
+width: 135px;
+float: right;
+}
+/* the businesses posted to the site may have a company logo */
+.comp_logo {
+	width: 480;
+	height: 320;
+}
+/* maps are part of the search results and have border, and padding */
+.maps {
 border: 1px solid #ddd;
 border-radius: 4px;
 padding: 5px;
 width: 300px;
 float: left;
 }
+/* on mobile screens, 992px or lower the body elements displayed lower width */
 @media screen and (max-width: 992px) {
 .wrapper, header, footer, section, nav {
 width: 960px;
