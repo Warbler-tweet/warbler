@@ -181,6 +181,3 @@ input:required{
 	border-color: red;
 	border-width: 1px;
 }
-input:invalid{
-	background-color: #ffcccc;
-	}
