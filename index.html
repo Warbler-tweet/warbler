@@ -22,8 +22,11 @@
 			<link rel="apple-touch-startup-image" href="https://www.thewarbler.ca/images/warbler.PNG" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-			<!-- the css file location used in the html -->
+			<!-- links for css, js, and animate.css stylesheet -->
 			<link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
+			<script src="assets/js/script.js" type="text/javascript"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			
 		</head>
 				<!-- the first class wraps the entire document for use in CSS  -->
 		 <div class="wrapper">
@@ -34,8 +37,9 @@
 					<!-- using the img srcset we specify different quality images for different types of graphics -->
 					  <img src="images/warbler.PNG" alt="Logo" class="logo1" srcset="images/warbler_2x.PNG 2x">
 						<img src="images/warbler.PNG" alt="Logo" class="logo2" srcset="images/warbler_2x.PNG 2x">
-						<h1>The Warbler</h1>
-						<h2>Cannabis business locator Ontario Canada</h2>
+						<!-- the header text are animated -->
+						<h1 class="animate__animated animate__pulse">The Warbler</h1>
+						<h2 class="animate__animated animate__bounce">Cannabis business locator Ontario Canada</h2>
 					</header>
 					<!-- the nav tag is related to navigating the page(s) -->
 					<!-- There are five related pages for the client side, four of which are in nav -->
@@ -53,8 +57,8 @@
 						<section>
 							<!-- The first section of the article will have a class to specify position in CSS -->
 								<div class="uptop">
-								<!-- information for the user -->
-									<p>The Warbler brings cannabis enthusiasts and licensed cannabis businesses together.</p>
+								<!-- the info text is animated -->
+									<p class="animate__animated animate__flash">The Warbler brings cannabis enthusiasts and licensed cannabis businesses together.</p>
 									<!-- This form takes as input a textual element for searching the database -->
 									<!-- and a numeric element in a dropdown menu to search by rating -->
 									<form action="results/results.html">
@@ -68,6 +72,14 @@
 												<option value=”five”>5</option>
 											</select>
 											<input type="submit" name="submit" class="submit" value="Search">
+											</form>
+											<!-- use the Geolocation API to find user location -->
+											<button type="button" onclick="getLocation()" >Search by my  location!</button>
+											<!-- enter the user location into a form -->
+											<form action="results/results.html">
+												<input type="text" name="latitude" id="latitude" value="Latitude: 00000000">
+												<input type="text" name="longitude" id="longitude" value="Longitude: 00000000">
+												<input type="submit" name="location" class="location" value="Submit">
 											</form>
 										</div>
 									</section>

@@ -6,8 +6,10 @@
 			<head>
 				<meta charset="utf-8">
 				<title>The Warbler</title>
-				<!-- the css file location used in the html doc -->
+				<!-- links for css, js, and animate.css stylesheet -->
 				<link href="../assets/css/styles.css" rel="stylesheet" type="text/css"/>
+			  <script src="../assets/js/script.js" type="text/javascript"></script>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 			</head>
 			<!-- the first class wraps the entire document for use in CSS  -->
 		  <div class="wrapper">
@@ -18,8 +20,9 @@
 					<!-- using the img srcset we specify different quality images for different types of graphics -->
 					  <img src="../images/warbler.PNG" alt="Logo" class="logo1" srcset="../images/warbler_2x.PNG 2x">
 						<img src="../images/warbler.PNG" alt="Logo" class="logo2" srcset="../images/warbler_2x.PNG 2x">
-						<h1>The Warbler</h1>
-						<h2>Cannabis business locator Ontario Canada</h2>
+						<!-- the header text are animated -->
+						<h1 class="animate__animated animate__pulse">The Warbler</h1>
+						<h2 class="animate__animated animate__bounce">Cannabis business locator Ontario Canada</h2>
 					</header>
 					<!-- the nav tag is related to navigating the page(s) -->
 					<!-- There are five related pages for the client side, four of which are in nav -->
@@ -37,34 +40,37 @@
 						<section>
 							<!-- The first section of the article will have a class to specify position in CSS -->
 							<div class="uptop">
-							<!-- information for the user -->
-								<p>Submit a Cannabis retail business to The Warbler</p>
+							<!-- the info text is animated -->
+								<p class="animate__animated animate__flash">Submit a Cannabis retail business to The Warbler</p>
 							<!-- This form takes as input textual elements for business information -->
 							<!-- as well as image and video elements -->
 							<!-- to enter an object into the database of businesses, but server is not implemented -->
 								<form action="">
 									<label class="form_labels"> Name: </label>
-									<br>
-									<input type="text" name="name" class="Business_Name" placeholder="Business Name">
+									<br> <br>
+									<input type="text" name="name" class="Business_Name" placeholder="Business Name" required>
 									<br> <br> <br>
 									<label class="form_labels"> Description: </label>
-									<br>
-									<input type="text" name="description" class="Description" placeholder="Description">
+									<br> <br>
+									<input type="text" name="description" class="Description" placeholder="Description" required>
 									<br> <br> <br>
+									<!-- use the Geolocation API to find user location -->
+									<button type="button" onclick="getLocation()">Use my location!</button>
 									<label class="form_labels"> Latitude: </label>
-									<br>
-									<input type="text" name="latitude" class="Latitude" placeholder="Latitude">
+									<br> 
+									<!-- use the HTML5 and CSS3 form validation for patterns -->
+									<input type="text" name="latitude" id="latitude" class="Latitude" placeholder="Latitude" pattern="^((\-?|\+?)?\d+(\.\d+)?)$" required>
 									<br> <br> <br>
 									<label class="form_labels"> Longitude: </label>
-									<br>
-									<input type="text" name="longitude" class="Longitude" placeholder="Longitude">
+									<br> <br>
+									<input type="text" name="longitude" id="longitude" class="Longitude" placeholder="Longitude" pattern="^((\-?|\+?)?\d+(\.\d+)?)$" required>
 									<br> <br> <br>
 									<label class="form_labels"> Image: </label>
-									<br>
+									<br> <br>
 									<input type="file" name="object_image" class="object_image" value="fileupload" accept="image/*">
 									<br> <br> <br>
 									<label class="form_labels"> Video: </label>
-									<br>
+									<br> <br>
 									<input type="file" name="object_video" class="object_video" value="fileupload" accept="video/*">
 									<br> <br> <br>
 									<input type="submit" name="submit" class="submit" value="Enter">

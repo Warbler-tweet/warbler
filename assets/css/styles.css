@@ -65,7 +65,7 @@ margin: 0;
 
 /* these elements are about forms */
 /* they specify purple backgrounds and white font */
-input, select {
+input, select, button, label {
 padding: 10px;
 font-size: 20px;
 background-color: #5c3c92;
@@ -172,3 +172,15 @@ float: left;
 width: 960px;
 }
 }
+/* set the height of the map*/
+#mapid {
+height: 380px; 
+}
+/* use css validation requirements*/
+input:required{
+	border-color: red;
+	border-width: 1px;
+}
+input:invalid{
+	background-color: #ffcccc;
+	}

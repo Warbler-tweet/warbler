@@ -6,8 +6,12 @@
 			<head>
 				<meta charset="utf-8">
 				<title>The Warbler</title>
-				<!-- the css file location used in the html doc -->
+				<!-- links for css, js, leaflet map, and animate.css stylesheet -->
 				<link href="../assets/css/styles.css" rel="stylesheet" type="text/css"/>
+				<script src="../assets/js/script.js" type="text/javascript"></script>
+				<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+			  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 			</head>
       <!-- the first class wraps the entire document for use in CSS  -->
 		  <div class="wrapper">			
@@ -18,8 +22,9 @@
 					<!-- using the img srcset we specify different quality images for different types of graphics -->
 					  <img src="../images/warbler.PNG" alt="Logo" class="logo1" srcset="../images/warbler_2x.PNG 2x">
 						<img src="../images/warbler.PNG" alt="Logo" class="logo2" srcset="../images/warbler_2x.PNG 2x">
-						<h1>The Warbler</h1>
-						<h2>Cannabis business locator Ontario Canada</h2>
+						<!-- the header text are animated -->
+						<h1 class="animate__animated animate__pulse">The Warbler</h1>
+						<h2 class="animate__animated animate__bounce">Cannabis business locator Ontario Canada</h2>
 					</header>
 					<!-- the nav tag is related to navigating the page(s) -->
 					<!-- There are five related pages for the client side, four of which are in nav -->
@@ -38,7 +43,8 @@
 							<!-- The first section of the article will have a class to specify position in CSS -->
 							<div class="uptop">
 								<h4> Overview </h4>
-								<p>T Cannabis located at 38 Mill St. E. Acton, ON</p>
+								<!-- the info text is animated -->
+								<p class="animate__animated animate__flash">T Cannabis located at 38 Mill St. E. Acton, ON</p>
 								<!-- the table contains the results for one sample -->
 								<!-- there are five columns to view -->
 								<!-- and there is one hard coded entrie to display without using a server -->
@@ -67,23 +73,13 @@
 						<!-- The second section contains the further results -->
 						<section>
 						<!-- This table contains the map information from the results, only one entry (sample) -->
-							<table>
-								<thead>
-									<tr>
-										<th>Result</th>
-										<th>Name</th>
-										<th>Location</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>T Cannabis</td>
-										<td>
-											<img src="1_TCANNABIS.PNG" alt="T Cannabis on a map" class="maps"></td>
-										</tr>
-									</tbody>
-								</table>
+							<button onclick="loadSampleMap();">Load Map</button>
+								<!-- the maps are hardcoded results without the use of a server -->
+								  <div id="mapid"></div>
+								  	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                    crossorigin=""></script>
+						</section>
 								<!-- The third section contains an image of the company logo -->
 							<section>
 							  <!-- if the browser window is greater than 800px then image selected -->
@@ -92,7 +88,6 @@
 							  <source media="(min-width: 800px)" srcset="../images/TCann.PNG, ../images/TCann_2x.PNG 2x">
 							  <img src="../images/TCann.PNG" alt="T Cannabis Company Logo" class="comp_logo">
 							 </picture>
-							</section>
 							</section>
 							<!-- The fourth section contains a video -->
 							<section>
