@@ -177,7 +177,7 @@ width: 960px;
 height: 380px; 
 }
 /* use css validation requirements*/
-input:required{
+input:invalid:required{
 	border-color: red;
 	border-width: 1px;
 }
