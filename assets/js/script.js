@@ -18,7 +18,7 @@ function showPosition(position) {
 }
 
 // function uses the leaflet mapping API to add map layers and markers to the results web page
-function loadMap() {
+function loadMap(set) {
 	var myMap = L.map("mapid").setView([43.63081, -80.04016], 8);
 	L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2FyYmxlci10d2VldCIsImEiOiJja3ZjeTliNXMxYTk0MzF0MjNuNGc1Mm5wIn0.EENJ38KC66Ua9WpVHhGebA" , {
 		maxZoom: 18,
@@ -29,15 +29,18 @@ function loadMap() {
 		zoomOffset: -1
 	}).addTo(myMap);
 	
-	var marker1 = new L.marker([43.63081, -80.04016]).bindPopup("T Cannabis").addTo(myMap);
-	var marker2 = new L.marker([43.86867, -79.03906]).bindPopup("The 6ix Cannabis").addTo(myMap);
-	var marker3 = new L.marker([44.15518, -79.86621]).bindPopup("Green Grove").addTo(myMap);
-	var marker4 = new L.marker([43.19868, -80.01655]).bindPopup("SPIRITLEAF ANCASTER").addTo(myMap);
-	var marker5 = new L.marker([43.14175, -80.26031]).bindPopup("ALPHA CANNABIS").addTo(myMap);
+	for( var i = 0; i <set.length; i++) {
+		var marker = new L.marker([set[i][1],set[i][2]]).bindPopup(set[i][0]).addTo(myMap);
+	}
+	//var marker1 = new L.marker([43.63081, -80.04016]).bindPopup('T Cannabis').addTo(myMap);
+	//var marker2 = new L.marker([43.86867, -79.03906]).bindPopup("The 6ix Cannabis").addTo(myMap);
+	//var marker3 = new L.marker([44.15518, -79.86621]).bindPopup("Green Grove").addTo(myMap);
+	//var marker4 = new L.marker([43.19868, -80.01655]).bindPopup("SPIRITLEAF ANCASTER").addTo(myMap);
+	//var marker5 = new L.marker([43.14175, -80.26031]).bindPopup("ALPHA CANNABIS").addTo(myMap);
 }
 
 // function uses the leafelt mapping API to add map layers and markers to the sample results page
-function loadSampleMap() {
+function loadSampleMap(row) {
 	var myMap = L.map("mapid").setView([43.63081, -80.04016], 10);
 	L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2FyYmxlci10d2VldCIsImEiOiJja3ZjeTliNXMxYTk0MzF0MjNuNGc1Mm5wIn0.EENJ38KC66Ua9WpVHhGebA" , {
 		maxZoom: 18,
@@ -48,7 +51,7 @@ function loadSampleMap() {
 		zoomOffset: -1
 	}).addTo(myMap);
 	
-	var marker1 = new L.marker([43.63081, -80.04016]).bindPopup("T Cannabis").addTo(myMap);
+	var marker1 = new L.marker([row[1], row[2]]).bindPopup(row[0]).addTo(myMap);
 }
 
 // function validates the input to the registration form and web page
