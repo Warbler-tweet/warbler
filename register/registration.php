@@ -38,7 +38,7 @@
 							<!-- the info text is animated -->
 								<p class="animate__animated animate__flash">Register with The Warbler</p>
 									<!-- This form takes as input textual elements for user information -->
-									<!-- to register with the website, but server is not implemented -->
+									<!-- to register with the website, the form submits to register.php -->
 								<form action="../php/register.php" method="post" onsubmit="return validate(this);" >
 									<label class="form_labels"> Username: </label>
 									<br> <br>

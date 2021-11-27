@@ -29,14 +29,11 @@ function loadMap(set) {
 		zoomOffset: -1
 	}).addTo(myMap);
 	
+	// markers are created dynamically
 	for( var i = 0; i <set.length; i++) {
 		var marker = new L.marker([set[i][1],set[i][2]]).bindPopup(set[i][0]).addTo(myMap);
 	}
-	//var marker1 = new L.marker([43.63081, -80.04016]).bindPopup('T Cannabis').addTo(myMap);
-	//var marker2 = new L.marker([43.86867, -79.03906]).bindPopup("The 6ix Cannabis").addTo(myMap);
-	//var marker3 = new L.marker([44.15518, -79.86621]).bindPopup("Green Grove").addTo(myMap);
-	//var marker4 = new L.marker([43.19868, -80.01655]).bindPopup("SPIRITLEAF ANCASTER").addTo(myMap);
-	//var marker5 = new L.marker([43.14175, -80.26031]).bindPopup("ALPHA CANNABIS").addTo(myMap);
+	
 }
 
 // function uses the leafelt mapping API to add map layers and markers to the sample results page
@@ -50,7 +47,7 @@ function loadSampleMap(row) {
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(myMap);
-	
+	// one marker is created dynamically
 	var marker1 = new L.marker([row[1], row[2]]).bindPopup(row[0]).addTo(myMap);
 }
 
